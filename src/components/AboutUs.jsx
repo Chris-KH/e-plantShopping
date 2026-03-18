@@ -1,11 +1,15 @@
 function AboutUs() {
   return (
-    <div className="about-us-card">
+    <div className="about-us-container">
       <p>
-        Paradise Nursery is a neighborhood plant studio focused on making indoor
-        jungles easy for everyone. We source healthy houseplants, pair them with
-        practical care guidance, and help you choose varieties that match your
-        space and lifestyle.
+        Paradise Nursery is your friendly online destination for premium
+        houseplants, stylish planters, and simple care tips that help every home
+        feel greener.
+      </p>
+      <p>
+        Our mission is to make plant shopping easy and joyful by offering
+        healthy plants, dependable delivery, and practical guidance for beginners
+        and experienced plant parents alike.
       </p>
     </div>
   );

@@ -35,7 +35,7 @@
   color: var(--color-ink);
 }
 
-.about-us-card p {
+.about-us-container p {
   margin: 0 0 32px;
   max-width: 62ch;
   color: var(--color-ink-soft);
