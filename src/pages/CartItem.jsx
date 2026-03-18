@@ -31,6 +31,12 @@ function CartItem() {
     dispatch(removeItem(itemId));
   };
 
+  const handleCheckout = () => {
+    window.alert(
+      "Checkout is coming soon. Thank you for shopping at Paradise Nursery!",
+    );
+  };
+
   return (
     <main className="cart-page">
       <Header />
@@ -50,18 +56,19 @@ function CartItem() {
           <Link className="ghost-button" to="/plants">
             Continue Shopping
           </Link>
-          <button
-            className="checkout-button"
-            onClick={() => window.alert("Coming Soon")}
-          >
+          <button className="checkout-button" onClick={handleCheckout}>
             Checkout
           </button>
         </div>
 
         {cartItems.length === 0 ? (
-          <p className="empty-cart">
-            Your cart is empty. Add some beautiful plants.
-          </p>
+          <div className="empty-cart" role="status" aria-live="polite">
+            <h2>No plants in your cart yet</h2>
+            <p>Your cart is empty. Add some beautiful plants to get started.</p>
+            <Link className="ghost-button" to="/plants">
+              Browse Plants
+            </Link>
+          </div>
         ) : (
           <ul className="cart-list">
             {cartItems.map((item) => (

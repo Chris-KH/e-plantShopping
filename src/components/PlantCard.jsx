@@ -1,15 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-import { addItem } from "../store/CartSlice";
-
 const FALLBACK_IMAGE =
   "https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=700&q=80";
 
-function PlantCard({ plant }) {
-  const dispatch = useDispatch();
-  const isInCart = useSelector((state) => Boolean(state.cart.items[plant.id]));
-
+function PlantCard({ plant, onAddToCart, isInCart }) {
   const handleAddToCart = () => {
-    dispatch(addItem(plant));
+    onAddToCart(plant);
   };
 
   return (
