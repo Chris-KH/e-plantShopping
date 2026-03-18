@@ -1,8 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Nunito:wght@400;600;700&display=swap");
+
 :root {
-  color: #1f2b22;
-  background-color: #f6f3ec;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --body-font: "Nunito", "Trebuchet MS", "Segoe UI", sans-serif;
+  --display-font: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --color-ink: #132c28;
+  --color-ink-soft: #385852;
+  --color-green-700: #0f8f74;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--color-ink-soft);
 }
