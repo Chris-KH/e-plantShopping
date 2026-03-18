@@ -19,6 +19,18 @@ function CartItem() {
   const totalItems = useSelector(selectCartCount);
   const totalCost = useSelector(selectCartTotal);
 
+  const handleIncrement = (itemId) => {
+    dispatch(increaseQuantity(itemId));
+  };
+
+  const handleDecrement = (itemId) => {
+    dispatch(decreaseQuantity(itemId));
+  };
+
+  const handleDelete = (itemId) => {
+    dispatch(removeItem(itemId));
+  };
+
   return (
     <main className="cart-page">
       <Header />
@@ -71,18 +83,14 @@ function CartItem() {
                 </div>
 
                 <div className="quantity-controls">
-                  <button onClick={() => dispatch(decreaseQuantity(item.id))}>
-                    -
-                  </button>
+                  <button onClick={() => handleDecrement(item.id)}>-</button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => dispatch(increaseQuantity(item.id))}>
-                    +
-                  </button>
+                  <button onClick={() => handleIncrement(item.id)}>+</button>
                 </div>
 
                 <button
                   className="delete-button"
-                  onClick={() => dispatch(removeItem(item.id))}
+                  onClick={() => handleDelete(item.id)}
                 >
                   Delete
                 </button>

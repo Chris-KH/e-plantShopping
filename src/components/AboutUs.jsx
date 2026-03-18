@@ -8,8 +8,8 @@ function AboutUs() {
       </p>
       <p>
         Our mission is to make plant shopping easy and joyful by offering
-        healthy plants, dependable delivery, and practical guidance for beginners
-        and experienced plant parents alike.
+        healthy plants, dependable delivery, and practical guidance for
+        beginners and experienced plant parents alike.
       </p>
     </div>
   );
